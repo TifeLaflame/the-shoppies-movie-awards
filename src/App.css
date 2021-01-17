@@ -1,38 +1,167 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Public+Sans:ital,wght@0,300;0,400;0,700;1,500;1,600&display=swap");
+
+:root {
+  --bgColor: #151514;
+  --highlightColor: #3bc0d0;
+  --lightColor: #fdffff;
+  --darkPink: #ed254e;
+  --flush: #de4d6b;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--bgColor);
+}
+.movie {
+  width: 220px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.movieitem {
+  position: relative;
+  overflow: hidden;
+  transition: transform ease-in-out 0.4s;
+}
+.movieitem:hover {
+  cursor: pointer;
+}
+
+.overlay {
+  background-color: rgba(21, 21, 20, 0.9);
+  color: var(--lightColor);
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  left: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+.movieitem:hover .overlay {
+  transform: translateX(0%);
+}
+
+h4 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+p {
+  font-weight: 500;
+}
+
+.cta {
+  width: 100%;
+  text-align: center;
+}
+.btn {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  color: var(--lightColor);
+
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  margin-bottom: 7px;
+  margin-top: 15px;
+}
+
+.btnPrimary {
+  background: var(--darkPink);
+  transition: background-color 0.1s ease-in;
+  padding: 10px 30px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.btnPrimary:hover,
+.btnPrimary:focus {
+  border: 2px solid var(--flush);
+  background: transparent;
+}
+
+.btnSec {
+  padding: 10px 20px;
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 7px;
+  background: var(--bgColor);
+  background-clip: padding-box;
+}
+.btnSec::after {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(var(--darkPink), var(--flush));
+  content: "";
+  z-index: -1;
+  border-radius: 7px;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.close {
+  margin-left: 15px;
+  vertical-align: middle;
+  width: 19px;
+  height: 19px;
+}
+.error {
+  margin: 0 auto;
+  text-align: center;
+  color: var(--darkPink);
+  font-size: 1.1em;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+button[disabled]:hover {
+  border: 1px solid #cccccc;
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#modal {
+  position: fixed;
+  left: 50%;
+  margin-left: -25%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 650px;
+  top: 0%;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+#modal.visible {
+  display: flex;
+  background: linear-gradient(90deg, var(--darkPink), var(--highlightColor));
+}
+
+.modalHeading {
+  color: var(--bgColor);
+}
+
+.loaderDiv {
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

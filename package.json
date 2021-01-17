@@ -2,7 +2,7 @@
   "name": "theshoppies",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://tifelaflame.github.io/the-shoppies-movie-awards/",
+  "homepage": "https://tifelaflame.github.io/the-shoppies-movie-awards/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -10,7 +10,9 @@
     "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-loader-spinner": "^3.1.14",
     "react-scripts": "4.0.1",
+    "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -18,9 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"yarn build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [
