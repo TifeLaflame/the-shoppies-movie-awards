@@ -22,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     const getMovies = async (searchQuery) => {
-      const url = `http://www.omdbapi.com/?s=${searchQuery}&apikey=${API_KEY}`;
+      const url = `https://www.omdbapi.com/?s=${searchQuery}&apikey=${API_KEY}`;
       try {
         setLoading(true);
         const blob = await fetch(url);
