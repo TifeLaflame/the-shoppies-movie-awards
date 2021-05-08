@@ -9,7 +9,7 @@ import { Container, MovieWrap, InputWrap, Input, Div, SectionHeading } from './c
 import Modal from './components/Modal';
 import './App.css';
 
-const API_KEY = '232670a6';
+const API_KEY = process.env.REACT_APP_APIKEY;
 const MOVIE_STORAGE_KEY = 'Movies Nominated';
 
 const App = () => {

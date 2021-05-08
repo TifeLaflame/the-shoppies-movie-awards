@@ -1,6 +1,6 @@
 # The Shoppies: Movie awards for entrepreneurs
 
-A project built for Front-End Developer Intern (Remote) - Summer 2021.
+A project built for Front-End Developer Intern
 
 A user can search for movies by their titles.
 
@@ -12,7 +12,7 @@ Project was created with:
 
 - HTML5/CSS3
 - React
-- [OMDB API] (#http://www.omdbapi.com/);
+- [OMDB API](#http://www.omdbapi.com/);
 - Styled Components
 
 ## Getting Started with Create React App
@@ -23,7 +23,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn start` or `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
