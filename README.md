@@ -6,6 +6,9 @@ A user can search for movies by their titles.
 
 A user is allowed to pick 5 movies for nominations.
 
+## View live version of App here 
+[Live version](https://tifelaflame.github.io/the-shoppies-movie-awards/)
+
 ## Technologies
 
 Project was created with:
